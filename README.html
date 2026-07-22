@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- Informações sobre o site e o funcionamento do código vão estar comentadas para melhor entendimento caso eu não esteja aqui pra explicar como alterar -->
+<!-- Caso precise colocar um novo militar copie o código abaixo e procure no código onde está o posto -->
+ <!-- <tr>
+ 
+                <td>1º</td>
+                <td>Cb PM</td>
+                <td>122730-A</td>
+                <td>Alexandre Machado Lima</td>
+                <td>Osasco</td>
+                <td>09/01/2026</td>
+
+            </tr>
+-->
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RPT Interno</title> <!-- Esse é o título da página -->
+
+<style>
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#f3f5f7;
+
+    color:#222;
+
+    padding:40px;
+
+}
+
+/* ========================= */
+/* CABEÇALHO */
+/* ========================= */
+
+header{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:45px;
+
+    padding-bottom:20px;
+
+    border-bottom:3px solid #A61E22;
+
+}
+
+.logo img{
+
+    width:150px;
+
+}
+
+header h1{
+
+    font-size:36px;
+
+    color:#A61E22;
+
+}
+
+header h3{
+
+    margin-top:6px;
+
+    color:#555;
+
+    font-weight:normal;
+
+}
+
+header p{
+
+    margin-top:10px;
+
+    color:#666;
+
+    font-size:15px;
+
+}
+
+.titulo{
+
+    text-align:left;
+
+}
+
+.titulo h1{
+
+    margin-bottom:5px;
+
+}
+
+.titulo h3{
+
+    margin-bottom:8px;
+
+}
+
+/* ========================= */
+/* DESTINOS */
+/* ========================= */
+
+.container{
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.grupo{
+
+    margin-top:20px;
+
+}
+
+.grupo:first-of-type{
+
+    margin-top:0;
+
+}
+
+.grupo h2{
+
+    color:#A61E22;
+
+    font-size:28px;
+
+    margin-bottom:18px;
+
+    padding-left:12px;
+
+    border-left:6px solid #A61E22;
+
+}
+
+/* ========================= */
+/* TABELAS */
+/* ========================= */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    table-layout:fixed;
+
+    background:white;
+
+    box-shadow:0 2px 6px rgba(0,0,0,.08);
+    border-radius: 8px;
+    overflow: hidden;
+
+}
+
+thead{
+
+    display:table-header-group;
+
+    background:#A61E22;
+
+    color:white;
+
+}
+
+th{
+
+    padding:11px 10px;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+}
+
+td{
+
+    padding:11px 10px;
+
+    font-size:14px;
+
+    border-bottom:1px solid #ddd;
+
+    text-align:center;
+
+}
+
+tbody tr:nth-child(even){
+
+    background:#f8f8f8;
+
+}
+
+tbody tr:hover{
+
+    background:#edf5ff;
+
+}
+
+td:nth-child(4){
+
+    text-align:left;
+
+}
+/* ========================= */
+/* LARGURA DAS COLUNAS */
+/* ========================= */
+
+th:nth-child(1),
+td:nth-child(1){
+
+    width:80px;
+
+}
+
+th:nth-child(2),
+td:nth-child(2){
+
+    width:120px;
+
+}
+
+th:nth-child(3),
+td:nth-child(3){
+
+    width:120px;
+
+}
+
+th:nth-child(5),
+td:nth-child(5){
+
+    width:170px;
+
+}
+
+th:nth-child(6),
+td:nth-child(6){
+
+    width:150px;
+
+}
+
+/* A coluna Nome ocupa o restante automaticamente */
+
+
+/* ========================= */
+/* TOTAL DE INSCRITOS */
+/* ========================= */
+
+.total-inscritos{
+
+    margin-top:10px;
+
+    text-align:right;
+
+    color:#666;
+
+    font-size:14px;
+
+    font-style:italic;
+
+}
+
+
+/* ========================= */
+/* LINK DE INSCRIÇÃO */
+/* ========================= */
+
+.inscricao{
+
+    margin-top:60px;
+
+    padding:22px;
+
+    background:#ffffff;
+
+    border-left:5px solid #A61E22;
+
+    box-shadow:0 2px 6px rgba(0,0,0,.08);
+
+}
+
+.inscricao h3{
+
+    color:#A61E22;
+
+    margin-bottom:10px;
+
+    font-size:19px;
+
+}
+
+.inscricao p{
+
+    color:#555;
+
+    margin-bottom:12px;
+
+    line-height:1.5;
+
+}
+
+.inscricao a{
+
+    color:#0056b3;
+
+    font-weight:bold;
+
+    text-decoration:none;
+
+    word-break:break-all;
+
+}
+
+.inscricao a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+/* ========================= */
+/* RODAPÉ */
+/* ========================= */
+
+footer{
+
+    margin-top:35px;
+
+    text-align:right;
+
+    color:#777;
+
+    font-size:12px;
+
+}
+
+
+/* ========================= */
+/* IMPRESSÃO */
+/* ========================= */
+
+@media print{
+
+    body{
+
+        background:white;
+
+        padding:0;
+
+    }
+
+    .grupo{
+
+        page-break-inside:avoid;
+
+    }
+
+    table{
+
+        box-shadow:none;
+
+    }
+
+    .inscricao{
+
+        box-shadow:none;
+
+    }
+
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo"> 
+
+        <!-- Aqui está o caminho da imagem que usamos de logo no site, caso seja alterada a imagem ou a pasta que ela está o caminho tem que ser descrito aqui, caso contrário ela não aparecerá -->
+        <img src="logo.png" alt="Brasão 18º GB">  
+
+    </div>
+
+    <div class="titulo">
+
+        <h1>RPT INTERNO</h1>
+
+        <h3>18º Grupamento de Bombeiros</h3>
+
+        <p>
+            Última atualização:
+             <!-- Para atualização, caso tenha novos inscritos, comece alterando a data abaixo -->
+            <strong>22/07/2026</strong>
+
+        </p>
+
+    </div>
+
+</header>
+
+<div class="container">
+
+<!-- ========================================= -->
+<!-- SANTANA DE PARNAÍBA -->
+<!-- ========================================= -->
+
+<div class="grupo">
+
+    <h2>Destino: Santana de Parnaíba</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+ <!-- NÃO MEXER -->
+                <th>Class.</th>
+                <th>Post/Grad</th>
+                <th>RE</th>
+                <th>Nome</th>
+                <th>EB Atual</th>
+                <th>Data de Inscrição</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            
+
+            
+
+
+        </tbody>
+
+    </table>
+
+    <div class="total-inscritos">
+
+        Total de inscritos:
+        <strong class="contador"></strong>
+
+    </div>
+
+</div>
+
+<!-- ========================================= -->
+<!-- COTIA -->
+<!-- ========================================= -->
+<div class="grupo">
+
+    <h2>Destino: Cotia</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>Class.</th>
+                <th>Post/Grad</th>
+                <th>RE</th>
+                <th>Nome</th>
+                <th>EB Atual</th>
+                <th>Data de Inscrição</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            
+
+        </tbody>
+
+    </table>
+
+    <div class="total-inscritos">
+
+        Total de inscritos:
+        <strong class="contador"></strong>
+
+    </div>
+
+</div>
+
+<!-- ========================================= -->
+<!-- EMBU DAS ARTES -->
+<!-- ========================================= -->
+
+<div class="grupo">
+
+    <h2>Destino: Embu das Artes</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>Class.</th>
+                <th>Post/Grad</th>
+                <th>RE</th>
+                <th>Nome</th>
+                <th>EB Atual</th>
+                <th>Data de Inscrição</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+         
+        </tbody>
+
+    </table>
+
+    <div class="total-inscritos">
+
+        Total de inscritos:
+        <strong class="contador"></strong>
+
+    </div>
+
+</div>
+
+<!-- ========================================= -->
+<!-- OSASCO -->
+<!-- ========================================= -->
+
+<div class="grupo">
+
+    <h2>Destino: Osasco</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>Class.</th>
+                <th>Post/Grad</th>
+                <th>RE</th>
+                <th>Nome</th>
+                <th>EB Atual</th>
+                <th>Data de Inscrição</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+          
+        </tbody>
+
+    </table>
+
+    <div class="total-inscritos">
+
+        Total de inscritos:
+        <strong class="contador"></strong>
+
+    </div>
+
+</div>
+
+<!-- ========================================= -->
+<!-- ITAPEVI -->
+<!-- ========================================= -->
+<div class="grupo">
+
+    <h2>Destino: Itapevi</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>Class.</th>
+                <th>Post/Grad</th>
+                <th>RE</th>
+                <th>Nome</th>
+                <th>EB Atual</th>
+                <th>Data de Inscrição</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+           
+
+
+
+        </tbody>
+
+    </table>
+
+    <div class="total-inscritos">
+
+        Total de inscritos:
+        <strong class="contador"></strong>
+
+    </div>
+
+</div>
+
+</div>
+<!-- ========================================= -->
+<!-- INSCRIÇÃO -->
+<!-- ========================================= -->
+
+<section class="inscricao">
+
+    <h3>Link para inscrição no RPT Interno</h3>
+
+    <p>
+        As inscrições deverão ser realizadas exclusivamente pelo formulário eletrônico abaixo:
+    </p>
+
+    <a href="https://forms.gle/ntkniJ4qrsCYSG6A9" target="_blank">
+        https://forms.gle/ntkniJ4qrsCYSG6A9
+    </a>
+
+</section>
+
+<footer>
+
+    Documento meramente informativo.
+
+</footer>
+
+
+<!-- CONTADOR AUTOMÁTICO DE QUANTIDADE DE MILITARES POR POSTO E CLASSIFICAÇÃO CONFORME DATA DE INSCRIÇÃO-->
+
+<script> 
+
+
+document.querySelectorAll(".grupo").forEach(grupo => {
+
+    const tbody = grupo.querySelector("tbody");
+    const linhas = Array.from(tbody.querySelectorAll("tr"));
+
+    // Ordena por data de inscrição
+    linhas.sort((a, b) => {
+
+        const dataA = a.cells[5].textContent.trim().split("/");
+        const dataB = b.cells[5].textContent.trim().split("/");
+
+        const dA = new Date(dataA[2], dataA[1] - 1, dataA[0]);
+        const dB = new Date(dataB[2], dataB[1] - 1, dataB[0]);
+
+        return dA - dB;
+
+    });
+
+    // Limpa a tabela
+    tbody.innerHTML = "";
+
+    // Reinsere já ordenado e classificado
+    linhas.forEach((linha, indice) => {
+
+        linha.querySelector(".classificacao").textContent = `${indice + 1}º`;
+
+        tbody.appendChild(linha);
+
+    });
+
+    // Atualiza o total
+    grupo.querySelector(".contador").textContent = linhas.length;
+
+});
+
+
+</script>
+
+</body>
+
+</html>
