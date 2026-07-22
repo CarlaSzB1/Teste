@@ -23,378 +23,7 @@
 
     <title>RPT Interno</title> <!-- Esse é o título da página -->
 
-<style>
-
-*{
-
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-
-}
-
-body{
-
-    font-family:Arial, Helvetica, sans-serif;
-
-    background:#f3f5f7;
-
-    color:#222;
-
-    padding:40px;
-
-}
-
-/* ========================= */
-/* CABEÇALHO */
-/* ========================= */
-
-header{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:20px;
-
-    margin-bottom:45px;
-
-    padding-bottom:20px;
-
-    border-bottom:3px solid #A61E22;
-
-}
-
-.logo img{
-
-    width:150px;
-
-}
-
-header h1{
-
-    font-size:36px;
-
-    color:#A61E22;
-
-}
-
-header h3{
-
-    margin-top:6px;
-
-    color:#555;
-
-    font-weight:normal;
-
-}
-
-header p{
-
-    margin-top:10px;
-
-    color:#666;
-
-    font-size:15px;
-
-}
-
-.titulo{
-
-    text-align:left;
-
-}
-
-.titulo h1{
-
-    margin-bottom:5px;
-
-}
-
-.titulo h3{
-
-    margin-bottom:8px;
-
-}
-
-/* ========================= */
-/* DESTINOS */
-/* ========================= */
-
-.container{
-    max-width: 1800px;
-    margin: 0 auto;
-}
-
-.grupo{
-
-    margin-top:20px;
-
-}
-
-.grupo:first-of-type{
-
-    margin-top:0;
-
-}
-
-.grupo h2{
-
-    color:#A61E22;
-
-    font-size:28px;
-
-    margin-bottom:18px;
-
-    padding-left:12px;
-
-    border-left:6px solid #A61E22;
-
-}
-
-/* ========================= */
-/* TABELAS */
-/* ========================= */
-
-table{
-
-    width:100%;
-
-    border-collapse:collapse;
-
-    table-layout:fixed;
-
-    background:white;
-
-    box-shadow:0 2px 6px rgba(0,0,0,.08);
-    border-radius: 8px;
-    overflow: hidden;
-
-}
-
-thead{
-
-    display:table-header-group;
-
-    background:#A61E22;
-
-    color:white;
-
-}
-
-th{
-
-    padding:11px 10px;
-
-    font-size:15px;
-
-    font-weight:bold;
-
-}
-
-td{
-
-    padding:11px 10px;
-
-    font-size:14px;
-
-    border-bottom:1px solid #ddd;
-
-    text-align:center;
-
-}
-
-tbody tr:nth-child(even){
-
-    background:#f8f8f8;
-
-}
-
-tbody tr:hover{
-
-    background:#edf5ff;
-
-}
-
-td:nth-child(4){
-
-    text-align:left;
-
-}
-/* ========================= */
-/* LARGURA DAS COLUNAS */
-/* ========================= */
-
-th:nth-child(1),
-td:nth-child(1){
-
-    width:80px;
-
-}
-
-th:nth-child(2),
-td:nth-child(2){
-
-    width:120px;
-
-}
-
-th:nth-child(3),
-td:nth-child(3){
-
-    width:120px;
-
-}
-
-th:nth-child(5),
-td:nth-child(5){
-
-    width:170px;
-
-}
-
-th:nth-child(6),
-td:nth-child(6){
-
-    width:150px;
-
-}
-
-/* A coluna Nome ocupa o restante automaticamente */
-
-
-/* ========================= */
-/* TOTAL DE INSCRITOS */
-/* ========================= */
-
-.total-inscritos{
-
-    margin-top:10px;
-
-    text-align:right;
-
-    color:#666;
-
-    font-size:14px;
-
-    font-style:italic;
-
-}
-
-
-/* ========================= */
-/* LINK DE INSCRIÇÃO */
-/* ========================= */
-
-.inscricao{
-
-    margin-top:60px;
-
-    padding:22px;
-
-    background:#ffffff;
-
-    border-left:5px solid #A61E22;
-
-    box-shadow:0 2px 6px rgba(0,0,0,.08);
-
-}
-
-.inscricao h3{
-
-    color:#A61E22;
-
-    margin-bottom:10px;
-
-    font-size:19px;
-
-}
-
-.inscricao p{
-
-    color:#555;
-
-    margin-bottom:12px;
-
-    line-height:1.5;
-
-}
-
-.inscricao a{
-
-    color:#0056b3;
-
-    font-weight:bold;
-
-    text-decoration:none;
-
-    word-break:break-all;
-
-}
-
-.inscricao a:hover{
-
-    text-decoration:underline;
-
-}
-
-
-/* ========================= */
-/* RODAPÉ */
-/* ========================= */
-
-footer{
-
-    margin-top:35px;
-
-    text-align:right;
-
-    color:#777;
-
-    font-size:12px;
-
-}
-
-
-/* ========================= */
-/* IMPRESSÃO */
-/* ========================= */
-
-@media print{
-
-    body{
-
-        background:white;
-
-        padding:0;
-
-    }
-
-    .grupo{
-
-        page-break-inside:avoid;
-
-    }
-
-    table{
-
-        box-shadow:none;
-
-    }
-
-    .inscricao{
-
-        box-shadow:none;
-
-    }
-
-}
-
-
-</style>
-
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -455,9 +84,49 @@ footer{
 
         <tbody>
 
-            
+            <tr>
+ 
+                <td class="classificacao"></td>
+                <td>Cb PM</td>
+                <td>122730-A</td>
+                <td>Alexandre Machado Lima</td>
+                <td>Osasco</td>
+                <td>09/01/2026</td>
 
-            
+            </tr>
+
+            <tr>
+
+                <td class="classificacao"></td>
+                <td>Cb PM</td>
+                <td>126509-1</td>
+                <td>Edson Francisco de Brito Oliveira</td>
+                <td>Osasco</td>
+                <td>09/01/2026</td>
+
+            </tr>
+
+            <tr>
+
+                <td class="classificacao"></td>
+                <td>Sd PM</td>
+                <td>221031-2</td>
+                <td>Richard Vicente Evangelista</td>
+                <td>Osasco</td>
+                <td>11/01/2026</td>
+
+            </tr>
+
+            <tr>
+
+                <td class="classificacao"></td>
+                <td>Sd PM</td>
+                <td>155898-6</td>
+                <td>Ítalo César Vaz de Almeida Pereira</td>
+                <td>Osasco</td>
+                <td>12/01/2026</td>
+
+            </tr>
 
 
         </tbody>
@@ -497,7 +166,23 @@ footer{
 
         <tbody>
 
-            
+            <tr>
+                <td class="classificacao"></td>
+                <td>Sd PM</td>
+                <td>251695-A</td>
+                <td>Patrick Alves Oliveira Flores</td>
+                <td>Embu-Guaçu</td>
+                <td>13/05/2026</td>
+            </tr>
+
+            <tr>
+                <td class="classificacao"></td>
+                <td>Sd PM</td>
+                <td>210153-0</td>
+                <td>Tiago Soares Mariano</td>
+                <td>Itapecerica da Serra</td>
+                <td>18/05/2026</td>
+            </tr>
 
         </tbody>
 
@@ -537,7 +222,15 @@ footer{
 
         <tbody>
 
-         
+            <tr>
+                <td class="classificacao"></td>
+                <td>2º Sgt PM</td>
+                <td>149600-0</td>
+                <td>Ackson Augusto Conceição dos Santos</td>
+                <td>Embu-Guaçu</td>
+                <td>14/05/2026</td>
+            </tr>
+
         </tbody>
 
     </table>
@@ -576,7 +269,15 @@ footer{
 
         <tbody>
 
-          
+            <tr>
+                <td class="classificacao"></td>
+                <td>Sd PM</td>
+                <td>152655-3</td>
+                <td>Marlon Assis Rocha Ramos</td>
+                <td>Itapecerica da Serra</td>
+                <td>15/05/2026</td>
+            </tr>
+
         </tbody>
 
     </table>
@@ -614,7 +315,14 @@ footer{
 
         <tbody>
 
-           
+            <tr>
+                <td class="classificacao"></td>
+                <td>Cb PM</td>
+                <td>162530-6</td>
+                <td>Victor Matheus Torres Bremer</td>
+                <td>Osasco</td>
+                <td>10/01/2026</td>
+            </tr>
 
 
 
